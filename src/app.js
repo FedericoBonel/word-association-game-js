@@ -1,33 +1,9 @@
+import { getQuizes } from "./services/QuizService.mjs";
+
 const scoreContainer = document.querySelector("#score-display");
 const questionsContainer = document.querySelector("#question-container");
 
-const questions = [
-    {
-        quizWords: ["value", "estimate", "evaluate"],
-        options: ["jury", "assess"],
-        answerIndex: 1,
-    },
-    {
-        quizWords: ["close", "near", "next"],
-        options: ["trace", "adjacent"],
-        answerIndex: 1,
-    },
-    {
-        quizWords: ["foreign", "national", "ethnic"],
-        options: ["mad", "exotic"],
-        answerIndex: 1,
-    },
-    {
-        quizWords: ["assume", "insight", "weather"],
-        options: ["forecast", "sustainable"],
-        answerIndex: 0,
-    },
-    {
-        quizWords: ["fast", "quick", "prompt"],
-        options: ["charity", "rapid"],
-        answerIndex: 1,
-    },
-];
+const questions = getQuizes();
 
 const populateQuestions = (questions, questionsContainer) => {
     questions.forEach((question) => {
@@ -114,7 +90,7 @@ const checkOption = (optionIndex, answerIndex) => {
         score--;
         correct = false;
     }
-    
+
     scoreContainer.textContent = score;
 
     return correct;
