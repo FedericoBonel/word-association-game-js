@@ -1,0 +1,71 @@
+.app {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.question-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.question-card {
+    background-color: rgb(25, 25, 25);
+    margin: 15px;
+    color: rgb(215, 215, 215);
+    border-radius: 5px;
+    padding: 0px 40px 10px 40px;
+    transition: 0.3s;
+}
+
+.question-card:hover {
+    transform: scale(1.05);
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.option-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(75, 134, 111);
+    color: rgb(244, 244, 244);
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    filter: brightness(1.1);
+}
+
+.option-btn:active {
+    transform: scale(0.9);
+}
+
+.option-btn:disabled {
+    background-color: rgb(190, 190, 190);
+}
+
+.option-btn:disabled:hover {
+    filter: brightness(1);
+}
+
+.option-btn:disabled:active {
+    transform: scale(1);
+}
+
+.right-answer:disabled {
+    background-color: green;
+}
+
+.wrong-answer:disabled {
+    background-color: red;
+}
